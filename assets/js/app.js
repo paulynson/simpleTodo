@@ -1,12 +1,13 @@
+"use strict";
 // Declaring all variable
-var container = document.querySelector('.container');
-var userList = document.querySelector('.name-list');
-var listInput = document.querySelector('.list-input');
-var addListBtn = document.querySelector('.addListBtn');
-var scrollAdd = document.querySelector('.scrollAdd');
+const container = document.querySelector('.container');
+const userList = document.querySelector('.name-list');
+const listInput = document.querySelector('.list-input');
+const addListBtn = document.querySelector('.addListBtn');
+const scrollAdd = document.querySelector('.scrollAdd');
 addListBtn.disabled = true;
 //Event Listener when button is clicked
-addListBtn.addEventListener('click', function (e) {
+addListBtn.addEventListener('click', (e) => {
     //Prevent page from reloading
     e.preventDefault();
     // Add input value to the new <li> tag
@@ -15,16 +16,16 @@ addListBtn.addEventListener('click', function (e) {
     }
     else {
         addListBtn.disabled = false;
-        var newLi_1 = document.createElement('li');
-        var liContent = document.createTextNode(listInput.value);
+        const newLi = document.createElement('li');
+        const liContent = document.createTextNode(listInput.value);
         //create an <li> tag and a textNode
-        newLi_1.appendChild(liContent);
-        userList.prepend(newLi_1);
+        newLi.appendChild(liContent);
+        userList.prepend(newLi);
         container.classList.remove('active');
         listInput.value = '';
         // Lint Through when Task is done
-        newLi_1.addEventListener('click', function () {
-            newLi_1.style.textDecoration = 'line-through';
+        newLi.addEventListener('click', () => {
+            newLi.style.textDecoration = 'line-through';
         });
     }
 });
@@ -40,7 +41,7 @@ function checkInput() {
 }
 // Add New Task Function
 (function addNewTask() {
-    scrollAdd.addEventListener('click', function (e) {
+    scrollAdd.addEventListener('click', (e) => {
         e.preventDefault();
         scrollAdd.classList.toggle('active');
         if (container.classList.contains('active')) {
@@ -51,4 +52,3 @@ function checkInput() {
         }
     });
 })();
-console.log("hello");

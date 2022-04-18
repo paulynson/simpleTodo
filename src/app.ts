@@ -53,6 +53,3 @@ function checkInput() {
     }
   });
 })();
-
-
-console.log("hello")
