@@ -130,8 +130,8 @@ body .wrapper li:nth-child(odd) {
 }
 
 body .wrapper li:nth-child(even) {
-  background-color: #f5b5c2;
-  color: #e74062;
+  background-color: #e74062;
+  color: #ebe9ea;
 }
 
 body .topBtn {
