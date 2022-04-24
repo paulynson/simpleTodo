@@ -15,12 +15,12 @@ $backgroundLight: #fafafa;
 $backgroundContainer: rgba(196, 195, 195, 0.719);
 
 body {
-  padding: 30px auto;
+  padding: 50px auto;
   background-color: f7e8e5;
   height: 100vh;
   position: relative;
   font-size: 14px;
-  overflow: hidden;
+  // overflow: hidden;
 
   header {
     text-align: center;
@@ -108,13 +108,13 @@ body {
   
   .wrapper {
     margin: 20px 0;
+    padding-bottom: 20px;
     li {
         position: relative;
       list-style: none;
       padding: 5px 8px;
       width: 100%;
       margin: 5px 0;
-      display: block;
       
       &:nth-child(odd) {
         background-color: rgb(245, 181, 194);
@@ -187,4 +187,9 @@ body {
       width: 92vw;
     }
   }
+}
+
+.li-type{
+  display: flex;
+  justify-content: space-between;
 }
