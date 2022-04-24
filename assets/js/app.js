@@ -21,7 +21,7 @@ addListBtn.addEventListener('click', (e) => {
         const span = document.createElement('span');
         const liContent = document.createTextNode(listInput.value);
         const date = new Date();
-        const tDate = `${date.getDate(2)}-${date.getMonth()}-${date.getFullYear()} - ${date.getHours()}: ${date.getMinutes()}: ${date.getSeconds()}`;
+        const tDate = `${date.getDate()}-${date.getMonth()}-${date.getFullYear()} - ${date.getHours()}: ${date.getMinutes()}: ${date.getSeconds()}`;
         span.append(tDate);
         //   const checkedInp = document.createElement("input")
         //create an <li> tag and a textNode
